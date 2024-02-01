@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeSidebar } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import { GOOGLE_API_KEY } from "../utils/constant";
+import CommentsContainer from "./CommentsContainer";
 
 const WatchPage = () => {
   const dispatch = useDispatch();
@@ -29,8 +30,6 @@ const WatchPage = () => {
     setVideoDetails(json.items);
   };
 
-  console.log(videoDetails);
-
   return (
     <div className="p-5 mx-10">
       <iframe
@@ -52,6 +51,9 @@ const WatchPage = () => {
             {videoDetail.snippet.title}
           </h1>
         ))}
+      </div>
+      <div>
+        <CommentsContainer />
       </div>
     </div>
   );
