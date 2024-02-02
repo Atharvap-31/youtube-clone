@@ -32,6 +32,7 @@ const LiveChat = () => {
         message: liveChat,
       })
     );
+    setLiveChat("");
   };
 
   return (
