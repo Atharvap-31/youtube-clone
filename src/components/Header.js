@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -38,11 +39,13 @@ const Header = () => {
           src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/menu-512.png"
           alt="hamburger-menu"
         />
-        <img
-          className="h-6 ml-4"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHMUb8U4VeW2y-RflH7U7Yp0tsx1hJv0PwQ&usqp=CAU"
-          alt="youtube-icon"
-        />
+        <a href="/">
+          <img
+            className="h-6 ml-4"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHMUb8U4VeW2y-RflH7U7Yp0tsx1hJv0PwQ&usqp=CAU"
+            alt="youtube-icon"
+          />
+        </a>
       </div>
       <div className="col-span-10 ml-40">
         <div>

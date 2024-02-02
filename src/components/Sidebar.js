@@ -9,7 +9,7 @@ const Sidebar = () => {
   if (!sidebar) return null;
 
   return (
-    <div className="w-48 p-5 shadow-lg">
+    <div className="w-36 p-5 shadow-lg">
       <ul>
         <Link to="/">
           <li>Home </li>
